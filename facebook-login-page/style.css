@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #e2e2e2;
+}
+.facebook-login-page{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 30vh auto;
+    padding: 40px;
+}
+.fb-login-left{
+    width: 80%;
+    padding: 20px;
+}
+.fb-login-left h2{
+    font-size: 40px;
+    color: #1877F2;
+    margin: 10px 0;
+}
+.fb-login-right{
+    padding: 20px;
+    color: white;
+    box-shadow: 0 5px 8px 1px rgb(198, 197, 197);
+    width: 110%;
+}
+input[type="email"], input[type='password']{
+    width: 70%;
+    display: block;
+    outline: none;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.fb-login-btn{
+    width: 70%;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #1877F2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.fb-forgot-txt{
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: 10px;
+    color: #1877F2;
+}
+.new-btn{
+    width: 70%;
+    display: block;
+    margin: 20px auto;
+    text-decoration: none;
+    background-color: rgb(68, 182, 48);
+    color: white;
+    padding: 5px 10px;
+}
