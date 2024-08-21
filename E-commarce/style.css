@@ -1,0 +1,136 @@
+/* reset code and common start here  */
+:root{
+    --bodyColor: #fafafa ;
+    --sectionColor: #e4e4e4 ;
+    --titleTextColor: #222222 ;
+    --smallTextColor: #ababab ;
+    --cardColor: #ffffff;
+    --navColor: #36d2e6;
+    --white: #fff;
+    --transition: all 0.3s;
+    --border-radius: 0.6rem;
+    --box-shasow: 0.1rem 0.1rem 0.8rem gray;
+    --border-radius: 5px;
+    --padding: 0.5rem; 
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.btn{
+    border: none;
+    padding: var(--padding);
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: var(--transition);
+    background-color: var(--titleTextColor);
+    color: var(--white);
+
+}
+.btn:hover{
+    background-color: var(--navColor);
+    color: var(--titleTextColor);
+}
+body{
+    background-color: var(--bodyColor)
+}
+.flex-space-around{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-upper-a:hover, .nav-lower-a:hover{
+    background-color: var(--sectionColor);
+    color: var(--titleTextColor)
+}
+/* reset code and common end here  */
+
+/* nav code sharts here  */
+nav{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.nav-upper{
+   font-size: 1.2rem;
+   background-color: var(--navColor);
+   min-height: 10vh;
+}
+.nav-upper-a{
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: var(--titleTextColor);
+    transition: var(--transition);
+}
+.nav-upper-a-last{
+    background: none !important;
+}
+
+.nav-upper-profile-img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 2px solid var(--titleTextColor);
+}
+
+.nav-lower{
+    font-size: 1.2rem;
+    background-color: #9af1fc;
+    min-height: 8vh;
+    
+}
+.nav-lower-a{
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: var(--titleTextColor);
+    transition: var(--transition);
+    font-size: 1.5rem;
+}
+/* nav code ends here  */
+
+/* footer code starts here  */
+.footer{
+    background-color: var(--sectionColor);
+    color: var(--titleTextColor);
+    width: 100%;
+    min-height: 10vh;
+    padding: 1rem;
+}
+.footer-input{
+    padding: var(--padding);
+    border: none;
+    width: 15rem;
+    margin-left: 0.5rem;
+}
+.footer-subscribe{
+    margin: -1rem;
+}
+/* footer code ends here  */
+
+
+/* responsive code  */
+@media only screen and ( max-width: 788px){
+    .flex-space-around{
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
+
+    }
+}
