@@ -103,6 +103,20 @@ nav{
     transition: var(--transition);
     font-size: 1.5rem;
 }
+#short-menu{
+    display: none;
+}
+.label-menu{
+    font-size: 30px;
+    padding: var(--padding);
+    width: 100px;  
+    text-align: center; 
+    display: none;
+}
+.menu-div{
+    display: grid;
+    place-content: center;
+}
 /* nav code ends here  */
 
 /* footer code starts here  */
@@ -126,11 +140,19 @@ nav{
 
 
 /* responsive code  */
-@media only screen and ( max-width: 788px){
+@media only screen and ( max-width: 688px){
     .flex-space-around{
         flex-direction: column;
         gap: 1rem;
         padding: 1rem 0;
 
     }
+
+}
+
+@media only creen and ( max-width: 992px){
+
+}
+@media only screen and (max-width: 1312px){
+
 }
