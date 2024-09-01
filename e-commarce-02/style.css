@@ -201,6 +201,7 @@ header .social-bar{
     grid-gap: 3rem;
 }
 .product-item{
+    width: 100%;
     text-align: center;
     position: relative;
     transition: var(--transition);
@@ -320,7 +321,7 @@ header .social-bar{
 footer{
     background-color: var(--primaryColor);
     color: var(--secondaryColor);
-    padding: 3rem 0;
+    padding: 3vh;
     text-align: center;
 }
 footer p{
@@ -332,127 +333,290 @@ footer p{
 
 
 
-
-
-
-
-
-
-
-
-
 /* Mobile view  */
-@media only screen and (max-width: 481px){
+@media only screen and (max-width: 430px){
+    /* navigation bar  */
     nav{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    nav .logo {
-        margin-left: 7%;
-        position: absolute;
-        top: 3vh;
+        width: var(--width1st);
+        height: 20vh; 
+        position: relative; 
     }
     nav .search-area{
-        max-width: 200px;
-        width: 40%;
+        width: 50%;
         position: absolute;
-        top: 4vh;
-        right: 10%;
-       
+        top: 8vh;
+        right: 2%;
     }
-    .srch-input i {
-        font-size: 1.4rem;
+    /* header area  */
+    header{
+        height: auto;
     }
-    .srch-input #srch {
-        width: 80%;
-        padding-left: 1rem;
-        font-size: 1rem;
-        background: transparent;
-    }
-
-
-    /* hero area code  */
     header .img-text{
-        width: var(--width1st);
-        height: 80vh;
+        height: auto;
         flex-direction: column;
+        width: 95%;
+        margin: 0 auto; 
     }
     .img-text .image{
-        width: 100%;  
-        height: auto;
+        width: 100%;
+         
     }
     .img-text .header-text{
         width: 100%;
-        text-align: center;
-        height: 40vh;
     }
     .header-text p{
         font-size: 2rem;
     }
     .header-text p span{
+        font-size: 2.5rem;
+    }
+    header .social-bar{
+        display: none;
+    }
+    main{
+        width: 95%;
+        margin: 0 auto;
+    }
+    /* First section  */
+    .product-title-container{
+        width: 100%;
+        margin: 1rem 0;
+        padding: 0;
+    }
+    .product-title-container h3{
+        font-size: 2rem;
+        text-transform: capitalize;
+        text-align: center;
+        margin: 0.8rem auto;
+    }
+    .product-container{
+        margin:  o;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+
+    }
+    .product-item{
+        box-shadow: var(--box-shadow);
+    }
+    .product-item:hover{
+        box-shadow: none;
+        transform: scale(1);
+    }
+    .product-item a{
+        display: block;
+    }
+    .product-item a {
+        max-width: 100%;
+        width: 50%;
+        font-size: 1rem;
+        position: absolute;
+        top: 2%;
+        right: -7%;
+        display: block;
+    }
+    /* secound section  */
+    .about-container{
+        width: 100%;
+        margin: 1rem auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .about-container .about-text{
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem;
+    }
+    .about-container .about-text h2{
         color: var(--thirdthColor);
         font-size: 2.2rem;
+        margin: 0.8rem 0; 
     }
+    .about-text h3{
+        font-size: 1.2rem;
+        text-transform: capitalize;
+        margin-bottom: 1rem;
+    }
+    .about-text span{
+        color: var(--primaryColor);
+        text-decoration: underline;
+    }
+    .about-text p{
+        text-align: justify;
+    }
+    .about-container .abou-image{
+        width: 100%;
+    }
+    /* fourth-section */
     
-
+    .fourth-section h2{
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        text-align: center;
+        margin: 0.8rem auto;
+    }
+    .fourth-section .email-input-button{
+        width: 100%;
+        margin: auto;
+    }
+    .email-input-button #email{
+        width: 100%;
+        margin: 1rem 0;
+        padding: 0.3rem 0.7rem;
+    }
+    #email::placeholder{
+        font-size: 1rem;
+    }
+    #email::placeholder{
+        font-size: 0.9rem;
+    }
+    .email-input-button button {
+        top: 32%;
+        right: 2%;
+        font-size: 1rem;
+        padding: 0.2rem 1rem;
+    }
+    footer{
+        padding: 2vh;
+    }
+    footer p{
+        font-size: 1rem;
+    }
 }
-
 
 /* Tablet view  */
-@media only screen and (max-width: 900px){
-    nav{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    nav .logo {
-        margin-left: 7%;
-        position: absolute;
-        top: 3vh;
-    }
-    nav .search-area{
-        max-width: 200px;
-        width: 40%;
-        position: absolute;
-        top: 4vh;
-        right: 10%;
-       
-    }
-    .srch-input i {
-        font-size: 1.4rem;
-    }
-    .srch-input #srch {
-        width: 80%;
-        padding-left: 1rem;
-        font-size: 1rem;
-        background: transparent;
-    }
-
-
-    /* hero area code  */
-    header .img-text{
-        width: var(--width1st);
-        height: 80vh;
-        flex-direction: column;
-    }
-    .img-text .image{
-        width: 100%;  
+@media only screen and (min-width: 431px) and (max-width: 912px){
+    /* header area  */
+    header{
         height: auto;
     }
-    .img-text .header-text{
-        width: 100%;
-        text-align: center;
-        height: 40vh;
+    header .img-text{
+        height: auto;
+        flex-direction: column;
+        width: 95%;
+        margin: 0 auto; 
     }
     .header-text p{
-        font-size: 2rem;
+        font-size: 4rem;
     }
     .header-text p span{
+        font-size: 4.5rem;
+    }
+    .header-text a{
+        padding: 1rem 4rem;
+        font-size: 1.5rem;
+        transition: none;
+    }
+    header .social-bar{
+        display: none;
+    }
+    main{
+        width: 95%;
+        margin: 0 auto;
+    }
+    /* First section  */
+    .product-title-container{
+        width: 100%;
+        margin: 2rem 0;
+        padding: 0;
+    }
+    .product-title-container h3{
+        font-size: 4rem;
+        text-align: center;
+        margin: 0.8rem auto;
+    }
+    .product-container{
+        margin:  o;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+
+    }
+    .product-item{
+        box-shadow: var(--box-shadow);
+    }
+    .product-item:hover{
+        box-shadow: none;
+        transform: scale(1);
+    }
+    .product-item img{
+        height: auto;
+        margin-top: 3.5rem;
+    }
+    .product-item a{
+        display: block;
+    }
+    .product-item a {
+        width: 80%;
+        font-size: 1.5rem;
+        position: absolute;
+        top: 2%;
+        right: -7%;
+        display: block;
+    }
+    /* secound section  */
+    .about-container{
+        width: 100%;
+        margin: 1rem auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .about-container .about-text{
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem;
+    }
+    .about-container .about-text h2{
         color: var(--thirdthColor);
+        font-size: 3.5rem;
+        margin: 0.8rem 0; 
+    }
+    .about-text h3{
+        font-size: 2.2rem;
+        text-transform: capitalize;
+        margin-bottom: 1rem;
+    }
+    .about-text span{
+        color: var(--primaryColor);
+        text-decoration: underline;
+    }
+    .about-text p{
+        text-align: justify;
+        font-size: 1.5rem;
+    }
+    .about-container .abou-image{
+        width: 100%;
+    }
+    /* fourth-section */
+    
+    .fourth-section h2{
         font-size: 2.2rem;
     }
+    .fourth-section .email-input-button{
+        width: 90%;
+        margin: auto;
+    }
+    .email-input-button #email{
+        width: 100%;
+        margin: 1rem 0;
+        padding: 1.3rem 1.7rem;
+    }
+    #email::placeholder{
+        font-size: 1rem;
+    }
+    #email::placeholder{
+        font-size: 1.5rem;
+    }
+    .email-input-button button {
+        top: 23%;
+        right: 2%;
+        font-size: 2rem;
+        padding: .5rem 2rem;
+    }
+    footer{
+        padding: 2vh;
+    }
+    footer p{
+        font-size: 1rem;
+    }
 }
-
-
-/* Desktop view  */
