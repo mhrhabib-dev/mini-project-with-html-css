@@ -1,0 +1,30 @@
+/* reset code start */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+:root{
+    --white: #ffffff;
+    --black: #000;
+    --bodyColor: #f8f8f8;
+    --sectionColor: #e5e5e5;
+    --textColor: #35393b;
+    --linear-gradient: linear-gradient(to right,#677ef5, #67c2f5);
+     
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--bodyColor);
+}
+/* reset code end */
+div{
+    width: 100px;
+    margin: 50px auto;
+    box-shadow: rgba(0, 0, 0, 0.5);
+}
