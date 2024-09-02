@@ -4,16 +4,25 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style-type: none;
     border: none;
     outline: none;
 }
 :root{
+    --primaryColor: #677ef5;
+    --secoundaryColor: #67c2f5;
     --white: #ffffff;
     --black: #000;
     --bodyColor: #f8f8f8;
     --sectionColor: #e5e5e5;
     --textColor: #35393b;
     --linear-gradient: linear-gradient(to right,#677ef5, #67c2f5);
+    --border: 1px solid var(--textColor);
+    --border-radius: 5px;
+    --border-radius-2: 3rem;
+    --padding: 0.5rem 1rem;
+    --padding-2: 0.5rem 3rem;
+    --transition: all 0.3s ease;
      
 }
 html{
@@ -21,10 +30,117 @@ html{
 }
 body{
     background-color: var(--bodyColor);
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: default;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.display-flex,
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 /* reset code end */
-div{
-    width: 100px;
-    margin: 50px auto;
-    box-shadow: rgba(0, 0, 0, 0.5);
+
+nav{
+    width: 100%;
+    height: 10vh;
+    background-color: var(--white);
+    
+}
+nav .logo{
+    margin-left: 10%;
+}
+nav > ul{
+    margin-right: 10%;
+    display: flex;
+    align-items: center;
+}
+nav > ul > li{
+    margin: 0 0.3rem;
+}
+nav > ul > li > a{
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    font-size: 0.9rem;
+    color: var(--textColor);
+    text-transform: uppercase;
+    transition: var(--transition)
+}
+nav > ul > li > a:hover{
+    color: var(--primaryColor)
+}
+#checkbox-menu{
+    display: none;
+}
+.short-menu{
+    font-size: 1.3rem;
+    margin-right: 5%;
+    display: none;
+}
+@media only screen and ( max-width: 440px){
+    .short-menu{
+        display: block;
+    }
+    #checkbox-menu:checked ~ .nav-memnu-bar{
+        left: 0%;
+    }
+    nav .logo{
+        margin-left: 5%;
+        width: 90px;
+    }
+    nav ul{
+        position: fixed;
+        flex-direction: column;
+        text-align: center;
+        background-color: var(--bodyColor);
+        top: 10vh;
+        height: 90vh;
+        width: 100%;
+        left: -100%;
+        transition: var(--transition);
+        
+    }
+    nav > ul > li{
+        margin: 1rem 0 ;
+    }
+    nav > ul > li > a:hover{
+        color: var(--textColor);
+    }
+}
+@media only screen and (min-width: 441px) and ( max-width: 1025px){
+    .short-menu{
+        display: block;
+    }
+    #checkbox-menu:checked ~ .nav-memnu-bar{
+        left: 0%;
+    }
+    #checkbox-menu:checked ~ .short-menu i::before{
+        content: "\f00d";
+    }
+    nav .logo{
+        margin-left: 5%;
+        width: 90px;
+    }
+    nav ul{
+        position: fixed;
+        flex-direction: column;
+        text-align: center;
+        background-color: var(--bodyColor);
+        top: 10vh;
+        height: 90vh;
+        width: 100%;
+        left: -100%;
+        transition: var(--transition);
+        
+    }
+    nav > ul > li{
+        margin: 1rem 0 ;
+    }
+    nav > ul > li > a:hover{
+        color: var(--textColor);
+    }
 }
