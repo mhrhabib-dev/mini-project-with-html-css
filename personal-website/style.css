@@ -16,6 +16,7 @@
     --bodyColor: #f8f8f8;
     --sectionColor: #e5e5e5;
     --textColor: #35393b;
+    --grayColor: gray;
     --linear-gradient: linear-gradient(to right,#677ef5, #67c2f5);
     --border: 1px solid var(--textColor);
     --border-radius: 5px;
@@ -81,6 +82,57 @@ nav > ul > li > a:hover{
     margin-right: 5%;
     display: none;
 }
+header{
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .header-txt, .header-img{
+    width: 48%;
+}
+.header-txt h3{
+    font-weight: normal;
+}
+.header-txt h1{
+    font-size: 3.5rem;
+    margin: 1rem 0;
+}
+.header-txt span{
+    color: var(--primaryColor);
+    font-size: 4rem;
+    font-weight: bolder;
+}
+.header-txt p{
+    color: var(--grayColor);
+    opacity: 0.8;
+}
+.header-txt a{
+    display: inline-block;
+    margin: 1.3rem 0;
+    background: var(--linear-gradient);
+    padding: var(--padding-2);
+    color: var(--sectionColor);
+    transition: var(--transition);
+}
+.header-txt a:hover{
+    box-shadow: 0 8px 15px var(--secoundaryColor);
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and ( max-width: 440px){
     .short-menu{
         display: block;
@@ -88,10 +140,17 @@ nav > ul > li > a:hover{
     #checkbox-menu:checked ~ .nav-memnu-bar{
         left: 0%;
     }
+    #checkbox-menu:checked ~ .short-menu i::before{
+        content: "\f00d";
+    }
+    nav{
+        width: 100%;
+    }
     nav .logo{
         margin-left: 5%;
         width: 90px;
     }
+   
     nav ul{
         position: fixed;
         flex-direction: column;
@@ -102,7 +161,7 @@ nav > ul > li > a:hover{
         width: 100%;
         left: -100%;
         transition: var(--transition);
-        
+        z-index: 5;
     }
     nav > ul > li{
         margin: 1rem 0 ;
@@ -110,6 +169,29 @@ nav > ul > li > a:hover{
     nav > ul > li > a:hover{
         color: var(--textColor);
     }
+    /* header part  */
+    header{
+        width: 90%;
+        flex-direction: column;
+  
+    }
+    header .header-txt, .header-img{
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+    .header-txt h1{
+        font-size: 2.5rem;
+    }
+    .header-txt span{
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    .header-txt a:hover{
+        box-shadow: none;
+        transform: none;
+    }
+    
 }
 @media only screen and (min-width: 441px) and ( max-width: 1025px){
     .short-menu{
@@ -135,12 +217,27 @@ nav > ul > li > a:hover{
         width: 100%;
         left: -100%;
         transition: var(--transition);
-        
+        z-index: 5;
     }
     nav > ul > li{
         margin: 1rem 0 ;
     }
     nav > ul > li > a:hover{
         color: var(--textColor);
+    }
+    /* header part  */
+    header{
+        width: 90%;
+        flex-direction: column;
+  
+    }
+    header .header-txt, .header-img{
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+    .header-txt a:hover{
+        box-shadow: none;
+        transform: none;
     }
 }
