@@ -18,6 +18,7 @@
     --textColor: #35393b;
     --grayColor: gray;
     --linear-gradient: linear-gradient(to right,#677ef5, #67c2f5);
+    --box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     --border: 1px solid var(--textColor);
     --border-radius: 5px;
     --border-radius-2: 3rem;
@@ -89,26 +90,28 @@ header{
     justify-content: space-between;
     align-items: center;
 }
-header .header-txt, .header-img{
+header .header-txt,
+.header-img{
     width: 48%;
 }
-.header-txt h3{
+.header-txt h3, .about-text h3{
     font-weight: normal;
 }
-.header-txt h1{
+.header-txt h1, .about-text h2{
     font-size: 3.5rem;
     margin: 1rem 0;
 }
-.header-txt span{
+.header-txt span, .about-text span{
     color: var(--primaryColor);
     font-size: 4rem;
     font-weight: bolder;
 }
-.header-txt p{
+.header-txt p, .about-text p{
     color: var(--grayColor);
     opacity: 0.8;
 }
-.header-txt a{
+.header-txt a,
+.about-text a{
     display: inline-block;
     margin: 1.3rem 0;
     background: var(--linear-gradient);
@@ -116,14 +119,116 @@ header .header-txt, .header-img{
     color: var(--sectionColor);
     transition: var(--transition);
 }
-.header-txt a:hover{
+.header-txt a:hover, .about-text a:hover{
     box-shadow: 0 8px 15px var(--secoundaryColor);
     transform: scale(1.05);
 }
+/* first section code start  */
+.first-section{
+    width: 100%;
+    background-color: var(--white);
+}
+.first-section .about-container{
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-container .about-image{
+    width: 45%;
+}
+.about-container .about-text{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1rem 0 0;
+}
+/* secton secound code start  */
+.secound-section{
+    width: 100%;
+}
+.secound-section .service-container{
+    width: 80%;
+    margin: 0 auto;
+}
+.service-container .service-title{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+}
+.service-title h2{
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+.service-title span{
+    color: var(--primaryColor)
+}
+.service-title p{
+    font-weight: normal;
+    letter-spacing: 0.1em;
+}
+.service-container .service-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin: 3rem 0;
+}
+.service-items .service-single-box{
+    text-align: center;
+    padding: 0.4rem;
+    transition: var(--transition);
+}
+.service-single-box:hover{
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    background-color: var(--white);
+}
+.service-single-box:hover i{
+    color: var(--primaryColor);
+    transition: var(--transition);
+}
+.service-single-box i{
+    font-size: 2.5rem;
+    color: var(--textColor)
+}
+.service-single-box h3{
+    font-size: 1.5rem;
+    margin: .5rem 0;
+    color: var(--textColor)
+}
+.service-items p{
+    color: var(--grayColor);
+    text-align: start;
+}
 
-
-
-
+/* third section code start  */
+.third-section{
+    width: 100%;
+    height: 30vh;
+    background: var(--linear-gradient);
+    display: grid;
+    align-items: center;
+}
+.third-section .review-container{
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.review-container .review-box{
+    color: var(--white);
+    text-align: center;
+}
+.review-box h2{
+    font-size: 2.5rem;
+}
+.review-box p{
+    font-weight: normal;
+    letter-spacing: .1em;
+}
 
 
 
@@ -173,24 +278,78 @@ header .header-txt, .header-img{
     header{
         width: 90%;
         flex-direction: column;
-  
     }
     header .header-txt, .header-img{
         width: 100%;
         text-align: center;
         margin-top: 0.5rem;
     }
-    .header-txt h1{
+    .header-txt h1, .about-text h2{
         font-size: 2.5rem;
     }
-    .header-txt span{
+    .header-txt span, .about-text span{
         font-size: 3rem;
         font-weight: bold;
     }
-    .header-txt a:hover{
+    .header-txt a:hover , .about-text a:hover{
         box-shadow: none;
         transform: none;
     }
+    /* first section code start  */
+    .first-section .about-container{
+        width: 90%;
+        margin: 1rem auto;
+    }
+    .about-container .about-image{
+        display: none;
+    }
+    .about-container .about-text{
+        width: 100%;
+        padding: 0;
+    }
+   
+    /* secound-section  */
+    .service-container{
+        width: 100%;
+    }
+     .service-title{
+        width: 100%;
+
+    }
+    .service-title h2{
+        font-size: 2rem;
+        margin: 0.5rem 0;
+    }
+    .service-title p{
+        font-weight: normal;
+        letter-spacing: normal;
+    }
+    .service-container .service-items{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .service-items .service-single-box{
+       box-shadow: var(--box-shadow);
+    }
+    /* .third-section  */
+    .third-section{
+        width: 100%;
+        height: 50vh;
+    }
+    .third-section .review-container{
+        width: 90%;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+    .review-box h2{
+        font-size: 2rem;
+    }
+    .review-box p{
+        font-weight: normal;
+        letter-spacing: normal;
+    }
+    
+    
+
     
 }
 @media only screen and (min-width: 441px) and ( max-width: 1025px){
@@ -240,4 +399,58 @@ header .header-txt, .header-img{
         box-shadow: none;
         transform: none;
     }
+    /* first section code start  */
+    .first-section .about-container{
+        width: 90%;
+        margin: 1rem auto;
+    }
+    .about-container .about-image{
+        display: none;
+    }
+    .about-container .about-text{
+        width: 100%;
+        padding: 0;
+    }
+    /* secound-section  */
+    .service-container{
+        width: 100%;
+    }
+     .service-title{
+        width: 100%;
+
+    }
+    .service-title h2{
+        font-size: 2rem;
+        margin: 0.5rem 0;
+    }
+    .service-title p{
+        font-weight: normal;
+        letter-spacing: normal;
+    }
+    .service-container .service-items{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .service-items .service-single-box{
+       box-shadow: var(--box-shadow);
+    }
+    /* .third-section  */
+    .third-section{
+        width: 100%;
+        height: 30vh;
+    }
+    .third-section .review-container{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+    .review-box h2{
+        font-size: 2rem;
+    }
+    .review-box p{
+        font-weight: normal;
+        letter-spacing: normal;
+    }
+
+
 }
